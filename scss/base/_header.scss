@@ -1,0 +1,14 @@
+.m-bottom-0{
+    margin-bottom: 0!important;
+}
+
+header.nav-fixed {
+    width: 100%;
+    position: fixed;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-active {
+    background-color: rgba($color: #fff, $alpha: 0.7)!important;
+    
+}

@@ -1,0 +1,19 @@
+.card-body{
+    img{
+        border-radius: 3px;
+    }
+    
+}
+.card-deck{
+    a{
+        text-decoration: none!important;
+        color: black!important;
+    }
+}
+.theme{
+.card:hover{
+    border-color: black;
+    transition: 1s;
+    color: #a6ada7;
+}
+}
