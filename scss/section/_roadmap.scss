@@ -1,0 +1,47 @@
+.event-list{
+    list-style: none;
+}
+
+.date-block{
+    background-color: #f5f5f5;
+    border-bottom: .1875rem solid #ffd617;
+    display: inline-block;
+    margin-right: .75rem;
+    min-height: 6.25rem;
+    min-width: 6.25rem;
+    padding: .75rem .5rem;
+    position: relative;
+    text-align: center;
+}
+.date-block:after{
+    border-bottom: 1rem solid transparent;
+    border-right: 1rem solid #fff;
+    border-top: 1rem solid transparent;
+    content: " ";
+    position: absolute;
+    right: -.1875rem;
+    top: -.6875rem;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+.event-block{
+    border-bottom: 1px solid #ebebeb;
+    &__end{
+        border-bottom: 1px solid #404040;
+    }
+}
+
+.event-name{
+    text-align: left;
+}
+
+.week{
+    font-size:.75rem
+}
+.date{
+    font-size: 2rem;
+}
+.month{
+    font-size:.875rem;
+}
