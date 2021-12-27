@@ -68,7 +68,15 @@ header.nav-fixed {
 }
 
 .event-block__end {
-  border-bottom: 1px solid #404040;
+  border-bottom: 2px solid #404040;
+}
+
+.event-block:hover {
+  border-bottom: 1px solid #23b000;
+}
+
+.event-block__end:hover {
+  border-bottom: 2px solid #23b000;
 }
 
 .event-name {
