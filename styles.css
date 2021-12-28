@@ -2,6 +2,10 @@ body {
   background-color: #f0f0f0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .m-bottom-0 {
   margin-bottom: 0 !important;
 }
@@ -19,6 +23,11 @@ header.nav-fixed {
 
 .person {
   width: 40%;
+}
+
+.person a {
+  color: black;
+  font-weight: 600;
 }
 
 .place-holder {
@@ -40,8 +49,6 @@ header.nav-fixed {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 
 .card-container a {

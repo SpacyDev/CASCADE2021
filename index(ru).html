@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <title>Каскад 2021</title>
+</head>
+
+<body>
+    <header>
+        <div
+            class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-light shadow-sm m-bottom-0 fixed-top nav-fixed">
+            <h5 class="my-0 mr-md-auto font-weight-normal">Каскад 2021</h5>
+            <nav class="my-2 my-md-0 mr-md-3">
+                <a class="p-2 text-dark home" href="#">Домой</a>
+                <a class="p-2 text-dark commitee" href="#committee">Комитет</a>
+                <a class="p-2 text-dark Registration" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Регистрация</a>
+                <a class="p-2 text-dark" href="#venue">Место проведения</a>
+                <a class="p-2 text-dark" href="#contacts">Контакты</a>
+                <a class="pl-5 pr-1 text-dark" href="index.html">EN</a>
+                <a class="p-0 text-dark" href="#">|</a>
+                <a class="p-1 text-dark disabled" href="index(ru).html">RU</a>
+                <a class="p-0 text-dark disabled" href="in">|</a>
+                <a class="pl-1 pr-2 text-dark" href="index(uz).html">UZ</a>
+
+            </nav>
+        </div>
+    </header>
+    <main>
+         <!-- Modal -->
+         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title display-5" id="regisrtationTitle">Регистрация</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="row">
+                                <div class="mb-3 col">
+                                    <input type="text" class="form-control" placeholder="Фамилия">
+                                </div>
+                                <div class="mb-3 col">
+                                    <input type="text" class="form-control" placeholder="Имя">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Второе имя">
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Организация">
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Сообщение">
+                            </div>
+                            <div class="mb-3">
+                                <label for="inputState">Ученая степень, звание:</label>
+                                <select id="inputState" class="form-control">
+                                    <option>Бакалавр</option>
+                                    <option>MS или MSc</option>
+                                    <option>Кандидат наук</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Название статьи">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlTextarea1">Автор(ы):</label>
+                                <textarea class="form-control" id="author" rows="3"></textarea>
+                            </div>
+                            <div class="row">
+                            <div class="mb-3 col">
+                                <input type="text" class="form-control" id="inputCountry" placeholder="Страна">
+                            </div>
+                            <div class="mb-3 col">
+                                <input type="text" class="form-control" id="inputCity" placeholder="Город">
+                            </div>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="inputZip" placeholder="Почтовый код">
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="inputAddress" placeholder="Название улицы">
+                            </div>
+                            <div class="mb-3">
+                                <input type="tel" class="form-control" name="inputPhone" id="PhoneNumber" placeholder="Телефонный номер">
+                            </div>
+                            <div class="mb-3">
+                                <input type="tel" class="form-control" name="inputFax" id="faxNumber" placeholder="Номер факса">
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control" name="inputMail" id="emailAddress" placeholder="Адрес электронной почты">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary" type="submit">Представить форму</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="carousel">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="place-holder">
+
+                        </div>
+                        <div class="container">
+                            <div class="carousel-caption text-left">
+                                <h1>Example headline.</h1>
+                                <p>Some representative placeholder content for the first slide of the carousel.</p>
+                                <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="place-holder">
+
+                        </div>
+                        <div class="container">
+                            <div class="carousel-caption">
+                                <h1>Another example headline.</h1>
+                                <div class="place-holder">
+
+                                </div>
+
+                                <p>Some representative placeholder content for the second slide of the carousel.</p>
+                                <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="place-holder">
+
+                        </div>
+
+                        <div class="container">
+                            <div class="carousel-caption text-right">
+                                <h1>One more for good measure.</h1>
+                                <div class="place-holder">
+
+                                </div>
+                                <p>Some representative placeholder content for the third slide of this carousel.</p>
+                                <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-target="#myCarousel" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-target="#myCarousel" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </button>
+            </div>
+        </section>
+        <section class="theme">
+            <div class="px-3 py-3 pt-md-3 pb-md-2 mx-auto text-center col-8">
+                <h1 class="display-4">Устойчивое развитие сельского хозяйства в Центральной Азии и Южном Кавказе</h1>
+                <div class="card-container mb-4">
+                    <a href="#" class="card-item">
+                        <img src="img/place-holder-img.jpg" alt="" class="card-image">
+                        <h4 class="card-main-text">Пленарные и секционные заседания конференции</h4>
+                        <hr>
+                        <span class="card-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </span>
+                    </a>
+                    <a href="#" class="card-item">
+                        <img src="img/place-holder-img.jpg" alt="" class="card-image">
+                        <h4 class="card-main-text">Требования к статьям</h4>
+                        <hr>
+                        <span class="card-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </span>
+                    </a>
+                    <a href="#" class="card-item">
+                        <img src="img/place-holder-img.jpg" alt="" class="card-image" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                        <h4 class="card-main-text">Регистрация</h4>
+                        <hr>
+                        <span class="card-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </span>
+                    </a>
+                    <a href="#" class="card-item">
+                        <img src="img/place-holder-img.jpg" alt="" class="card-image">
+                        <h4 class="card-main-text">EasyChair</h4>
+                        <hr>
+                        <span class="card-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="committee" id="committee">
+            <div class="px-3 py-3 pt-md-3 pb-md-2 mx-auto text-center col-8">
+                <h2 class="display-5 mb-4">
+                    Организационный комитет конференции
+                </h2>
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="3000"
+                    data-pause="true">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="card-deck mb-4">
+                                <div class="card mb-4 shadow-sm h-auto col p-0">
+                                    <div class="card-body p-1 ">
+                                        <img src="img/place-holder-committee.png" width="100%" height="auto" alt="">
+                                    </div>
+                                    <div class="card-footer bg-white p-0 border-top-0">
+                                        <b>
+                                            Lorem ipsum
+                                        </b>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card mb-4 shadow-sm h-auto col p-0">
+                                    <div class="card-body p-1 ">
+                                        <img src="img/place-holder-committee.png" width="100%" height="auto" alt="">
+                                    </div>
+                                    <div class="card-footer bg-white p-0 border-top-0">
+                                        <b>
+                                            Lorem ipsum
+                                        </b>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card mb-4 shadow-sm h-auto col p-0">
+                                    <div class="card-body p-1 ">
+                                        <img src="img/place-holder-committee.png" width="100%" height="auto" alt="">
+                                    </div>
+                                    <div class="card-footer bg-white p-0 border-top-0">
+                                        <b>
+                                            Lorem ipsum
+                                        </b>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card mb-4 shadow-sm h-auto col p-0">
+                                    <div class="card-body p-1 ">
+                                        <img src="img/place-holder-committee.png" width="100%" height="auto" alt="">
+                                    </div>
+                                    <div class="card-footer bg-white p-0 border-top-0">
+                                        <b>
+                                            Lorem ipsum
+                                        </b>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card-deck mb-4">
+                                <div class="card mb-4 shadow-sm h-auto col p-0">
+                                    <div class="card-body p-1 ">
+                                        <img src="img/place-holder-committee.png" width="100%" height="auto" alt="">
+                                    </div>
+                                    <div class="card-footer bg-white p-0 border-top-0">
+                                        <b>
+                                            Lorem ipsum
+                                        </b>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card mb-4 shadow-sm h-auto col p-0">
+                                    <div class="card-body p-1 ">
+                                        <img src="img/place-holder-committee.png" width="100%" height="auto" alt="">
+                                    </div>
+                                    <div class="card-footer bg-white p-0 border-top-0">
+                                        <b>
+                                            Lorem ipsum
+                                        </b>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card mb-4 shadow-sm h-auto col p-0">
+                                    <div class="card-body p-1 ">
+                                        <img src="img/place-holder-committee.png" width="100%" height="auto" alt="">
+                                    </div>
+                                    <div class="card-footer bg-white p-0 border-top-0">
+                                        <b>
+                                            Lorem ipsum
+                                        </b>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card mb-4 shadow-sm h-auto col p-0">
+                                    <div class="card-body p-1 ">
+                                        <img src="img/place-holder-committee.png" width="100%" height="auto" alt="">
+                                    </div>
+                                    <div class="card-footer bg-white p-0 border-top-0">
+                                        <b>
+                                            Lorem ipsum
+                                        </b>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card-deck mb-4">
+                                <div class="card mb-4 shadow-sm h-auto col p-0">
+                                    <div class="card-body p-1 ">
+                                        <img src="img/place-holder-committee.png" width="100%" height="auto" alt="">
+                                    </div>
+                                    <div class="card-footer bg-white p-0 border-top-0">
+                                        <b>
+                                            Lorem ipsum
+                                        </b>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card mb-4 shadow-sm h-auto col p-0">
+                                    <div class="card-body p-1 ">
+                                        <img src="img/place-holder-committee.png" width="100%" height="auto" alt="">
+                                    </div>
+                                    <div class="card-footer bg-white p-0 border-top-0">
+                                        <b>
+                                            Lorem ipsum
+                                        </b>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card mb-4 shadow-sm h-auto col p-0">
+                                    <div class="card-body p-1 ">
+                                        <img src="img/place-holder-committee.png" width="100%" height="auto" alt="">
+                                    </div>
+                                    <div class="card-footer bg-white p-0 border-top-0">
+                                        <b>
+                                            Lorem ipsum
+                                        </b>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card mb-4 shadow-sm h-auto col p-0">
+                                    <div class="card-body p-1 ">
+                                        <img src="img/place-holder-committee.png" width="100%" height="auto" alt="">
+                                    </div>
+                                    <div class="card-footer bg-white p-0 border-top-0">
+                                        <b>
+                                            Lorem ipsum
+                                        </b>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="px-3 py-3 pt-md-3 pb-md-2 mx-auto text-center col-8">
+                <h2 class="display-5 mb-4">
+                    Почетные спикеры Международного научно-технического комитета
+                </h2>
+                <div class="card-deck mb-4">
+                    <div class="card mb-4 shadow-sm h-auto col p-0">
+                        <div class="card-body p-1 ">
+                            <img src="img/place-holder-committee.png" width="100%" height="auto" alt="">
+                        </div>
+                        <div class="card-footer bg-white p-0 border-top-0">
+                            <b>
+                                Lorem ipsum
+                            </b>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card mb-4 shadow-sm h-auto col p-0">
+                        <div class="card-body p-1 ">
+                            <img src="img/place-holder-committee.png" width="100%" height="auto" alt="">
+                        </div>
+                        <div class="card-footer bg-white p-0 border-top-0">
+                            <b>
+                                Lorem ipsum
+                            </b>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card mb-4 shadow-sm h-auto col p-0">
+                        <div class="card-body p-1 ">
+                            <img src="img/place-holder-committee.png" width="100%" height="auto" alt="">
+                        </div>
+                        <div class="card-footer bg-white p-0 border-top-0">
+                            <b>
+                                Lorem ipsum
+                            </b>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card mb-4 shadow-sm h-auto col p-0">
+                        <div class="card-body p-1 ">
+                            <img src="img/place-holder-committee.png" width="100%" height="auto" alt="">
+                        </div>
+                        <div class="card-footer bg-white p-0 border-top-0">
+                            <b>
+                                Lorem ipsum
+                            </b>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="px-3 py-3 pt-md-3 pb-md-2 mx-auto text-center col-8">
+                <h2 class="display-5 mb-4">
+                    Основные докладчики
+                </h2>
+                <div class="card-deck mb-4">
+                    <div class="card mb-4 shadow-sm h-auto col p-0 mr-xl-5">
+                        <div class="card-body p-1 ">
+                            <img src="img/place-holder-committee.png" width="100%" height="auto" alt="">
+                        </div>
+                        <div class="card-footer bg-white p-0 border-top-0">
+                            <b>
+                                Lorem ipsum
+                            </b>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card mb-4 shadow-sm h-auto col p-0 mr-xl-5">
+                        <div class="card-body p-1 ">
+                            <img src="img/place-holder-committee.png" width="100%" height="auto" alt="">
+                        </div>
+                        <div class="card-footer bg-white p-0 border-top-0">
+                            <b>
+                                Lorem ipsum
+                            </b>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card mb-4 shadow-sm h-auto col p-0">
+                        <div class="card-body p-1 ">
+                            <img src="img/place-holder-committee.png" width="100%" height="auto" alt="">
+                        </div>
+                        <div class="card-footer bg-white p-0 border-top-0">
+                            <b>
+                                Lorem ipsum
+                            </b>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-deck mb-4">
+                    <div class="card mb-4 shadow-sm h-auto col p-0 mr-xl-5">
+                        <div class="card-body p-1 ">
+                            <img src="img/place-holder-committee.png" width="100%" height="auto" alt="">
+                        </div>
+                        <div class="card-footer bg-white p-0 border-top-0">
+                            <b>
+                                Lorem ipsum
+                            </b>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card mb-4 shadow-sm h-auto col p-0 mr-xl-5">
+                        <div class="card-body p-1 ">
+                            <img src="img/place-holder-committee.png" width="100%" height="auto" alt="">
+                        </div>
+                        <div class="card-footer bg-white p-0 border-top-0">
+                            <b>
+                                Lorem ipsum
+                            </b>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card mb-4 shadow-sm h-auto col p-0">
+                        <div class="card-body p-1 ">
+                            <img src="img/place-holder-committee.png" width="100%" height="auto" alt="">
+                        </div>
+                        <div class="card-footer bg-white p-0 border-top-0">
+                            <b>
+                                Lorem ipsum
+                            </b>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="roadmap">
+            <div class="px-3 py-3 pt-md-3 pb-md-2 mx-auto text-center col-8 mb-4">
+                <ul class="event-list p-0">
+                    <li class="event-list-item">
+                        <div class="event-block d-flex flex-row mb-3 pb-3">
+                            <div class="date-block date-block d-flex flex-column">
+                                <span class="week">
+                                    Wed-Fri
+                                </span>
+                                <span class="date font-weight-bolder">
+                                    09-11
+                                </span>
+                                <span class="month font-weight-bold">
+                                    Nov
+                                </span>
+                            </div>
+                            <div class="event-name d-flex align-items-center ml-5">
+                                <span class="display-4">Регистрация</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="event-list-item">
+                        <div class="event-block d-flex flex-row mb-3 pb-3">
+                            <div class="date-block date-block d-flex flex-column">
+                                <span class="week">
+                                    Wed-Fri
+                                </span>
+                                <span class="date font-weight-bolder">
+                                    09-11
+                                </span>
+                                <span class="month font-weight-bold">
+                                    Nov
+                                </span>
+                            </div>
+                            <div class="event-name d-flex align-items-center ml-5">
+                                <span class="display-4">Прием статей</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="event-list-item">
+                        <div class="event-block d-flex flex-row mb-3 pb-3">
+                            <div class="date-block date-block d-flex flex-column">
+                                <span class="week">
+                                    Wed-Fri
+                                </span>
+                                <span class="date font-weight-bolder">
+                                    09-11
+                                </span>
+                                <span class="month font-weight-bold">
+                                    Nov
+                                </span>
+                            </div>
+                            <div class="event-name d-flex align-items-center ml-5">
+                                <span class="display-4">Подтверждение принятия</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="event-list-item">
+                        <div class="event-block d-flex flex-row mb-3 pb-3">
+                            <div class="date-block date-block d-flex flex-column">
+                                <span class="week">
+                                    Wed-Fri
+                                </span>
+                                <span class="date font-weight-bolder">
+                                    09-11
+                                </span>
+                                <span class="month font-weight-bold">
+                                    Nov
+                                </span>
+                            </div>
+                            <div class="event-name d-flex align-items-center ml-5">
+                                <span class="display-4">Регистрационный сбор</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="event-list-item">
+                        <div class="event-block__end d-flex flex-row mb-3 pb-3">
+                            <div class="date-block date-block d-flex flex-column">
+                                <span class="week">
+                                    Wed-Fri
+                                </span>
+                                <span class="date font-weight-bolder">
+                                    09-11
+                                </span>
+                                <span class="month font-weight-bold">
+                                    Nov
+                                </span>
+                            </div>
+                            <div class="event-name d-flex align-items-center ml-5">
+                                <span class="display-4">Дата конференции</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer id="contacts">
+        <div class="px-3 py-3 pt-md-3 pb-md-2 mx-auto text-center col-8 d-flex flex-row align-items-start">
+            <div class="contacts d-flex flex-column">
+                <h2 class="display-5 mb-4 d-flex">
+                    Ответственные:
+                </h2>
+                <ul class="list p-0 list-unstyled text-left">
+                    <li class="list-item">
+
+                        <h5 class="mb-4">
+                            от Секретариата консорциума КАСКАД:
+                        </h5>
+                        <div class="person mb-5">
+                            <p>
+                                <b>Алим Пулатов</b> - профессор, ответственный секретарь консорциума КАСКАД
+                            </p>
+                            <h6>
+                                Контакты:
+                            </h6>
+                            <p>
+                                Телефон: <a href="tel:+998(71) 237-54-39">+998(71) 237-54-39</a>
+                            </p>
+                            <p>
+                                Почта: <a href="mailto:alimpulatov@mail.ru">alimpulatov@mail.ru</a>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="list-item">
+                        <h5 class="mb-4">
+                            со стороны ТИИИМЭ:
+                        </h5>
+                        <div class="person mb-5">
+                            <p>
+                                <b>Хабибулло Пирматов</b> - координатор консорциума КАСКАД от ТИИИМСХ, Центр ЭкоГИС,
+                                доцент, PhD Словацкий сельскохозяйственный университет, Словакия
+                            </p>
+                            <h6>
+                                Контакты:
+                            </h6>
+                            <p>
+                                Телефон: <a href="tel:+998(71) 237-19-34">+998(71) 237-19-34</a>
+                            </p>
+                            <p>
+                                Почта: <a href="mailto:hpirmatov@mail.ru">hpirmatov@mail.ru</a>
+                            </p>
+                        </div>
+                        <div class="person mb-3">
+                            <p>
+                                <b>Сардор Хамидов</b> - доцент, MSc Northwest A&F University, Китай
+                            </p>
+                            <h6>
+                                Контакты:
+                            </h6>
+                            <p>
+                                Телефон: <a href="tel:+998(71) 237-19-34">+998(71) 237-19-34</a>
+                            </p>
+                            <p>
+                                Почта: <a href="mailto:hpirmatov@mail.ru">hpirmatov@mail.ru</a>
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="map d-flex flex-column">
+                <h2 class="display-5 mb-4 d-flex ">
+                    ТАШКЕНТСКИЙ ИНСТИТУТ ИНЖЕНЕРОВ ИРРИГАЦИИ И МЕХАНИЗАЦИИ СЕЛЬСКОГО ХОЗЯЙСТВА
+                </h2>
+                <div class="google-map mb-3" id="venue">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d315.06679872708355!2d69.23977863431953!3d41.299346666319984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b5b3e953c75%3A0xe8e8f91da680c6ed!2sEcoGIS!5e0!3m2!1sru!2s!4v1640686393172!5m2!1sru!2s"
+                        width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div class="counter d-flex justify-content-between">
+                    <a href="https://info.flagcounter.com/Khzx"><img
+                            src="https://s01.flagcounter.com/mini/Khzx/bg_F0F0F0/txt_000000/border_F0F0F0/flags_0/"
+                            alt="Flag Counter" border="0"></a>
+                    <a href="https://info.flagcounter.com/SSNo"><img
+                            src="https://s05.flagcounter.com/countxl/SSNo/bg_F0F0F0/txt_000000/border_F0F0F0/columns_4/maxflags_12/viewers_3/labels_1/pageviews_1/flags_0/percent_0/"
+                            alt="Flag Counter" border="0"></a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="add-info d-flex justify-content-center p-3 px-md-4 mb-3 ">
+            <span class="EcoGIS display-5">ЭкоГИС© 2021. Все права защищены.</span>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?
+             cb=googleTranslateElementInit">
+    </script>
+    <script src="js/index.js"></script>
+    <script src="js/ru.js"></script>
+</body>
+
+</html>

@@ -16,13 +16,16 @@
     <header>
         <div
             class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-light shadow-sm m-bottom-0 fixed-top nav-fixed">
-            <h5 class="my-0 mr-md-auto font-weight-normal">Cascade 2021</h5>
+            <a class="my-0 mr-md-auto text-dark text-decoration-none" href="#">
+                <h5 class="my-0 mr-md-auto font-weight-normal">Cascade 2021</h5>
+            </a>
             <nav class="my-2 my-md-0 mr-md-3">
                 <a class="p-2 text-dark home" href="#">Home</a>
-                <a class="p-2 text-dark commitee" href="#">Commitee</a>
-                <a class="p-2 text-dark Registration" href="#">Registration</a>
-                <a class="p-2 text-dark" href="#">Venue</a>
-                <a class="p-2 text-dark" href="#">Contact</a>
+                <a class="p-2 text-dark commitee" href="#committee">Commitee</a>
+                <a class="p-2 text-dark Registration" type="button" class="btn btn-primary" data-toggle="modal"
+                    data-target="#exampleModal">Registration</a>
+                <a class="p-2 text-dark" href="#venue">Venue</a>
+                <a class="p-2 text-dark" href="#contacts">Contact</a>
                 <a class="pl-5 pr-1 text-dark" href="index.html">EN</a>
                 <a class="p-0 text-dark" href="#">|</a>
                 <a class="p-1 text-dark disabled" href="index(ru).html">RU</a>
@@ -33,6 +36,81 @@
         </div>
     </header>
     <main>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title display-5" id="regisrtationTitle">Regisrtation</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="row">
+                                <div class="mb-3 col">
+                                    <input type="text" class="form-control" placeholder="Surname">
+                                </div>
+                                <div class="mb-3 col">
+                                    <input type="text" class="form-control" placeholder="Name">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Middle name">
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="The organization">
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="The post">
+                            </div>
+                            <div class="mb-3">
+                                <label for="inputState">Academic degree, title:</label>
+                                <select id="inputState" class="form-control">
+                                    <option>BSc</option>
+                                    <option>MS or MSc</option>
+                                    <option>PhD</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Article title">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlTextarea1">Author(s):</label>
+                                <textarea class="form-control" id="author" rows="3"></textarea>
+                            </div>
+                            <div class="row">
+                            <div class="mb-3 col">
+                                <input type="text" class="form-control" id="inputCountry" placeholder="Country">
+                            </div>
+                            <div class="mb-3 col">
+                                <input type="text" class="form-control" id="inputCity" placeholder="City">
+                            </div>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="inputZip" placeholder="Postal code">
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="inputAddress" placeholder="Street name">
+                            </div>
+                            <div class="mb-3">
+                                <input type="tel" class="form-control" name="inputPhone" id="PhoneNumber" placeholder="Phone number">
+                            </div>
+                            <div class="mb-3">
+                                <input type="tel" class="form-control" name="inputFax" id="faxNumber" placeholder="Fax number">
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control" name="inputMail" id="emailAddress" placeholder="Email address">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary" type="submit">Submit form</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <section class="carousel">
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
@@ -116,7 +194,7 @@
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         </span>
                     </a>
-                    <a href="#" class="card-item">
+                    <a href="#" class="card-item" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                         <img src="img/place-holder-img.jpg" alt="" class="card-image">
                         <h4 class="card-main-text">Regisrtation</h4>
                         <hr>
@@ -135,7 +213,7 @@
                 </div>
             </div>
         </section>
-        <section class="committee">
+        <section class="committee" id="committee">
             <div class="px-3 py-3 pt-md-3 pb-md-2 mx-auto text-center col-8">
                 <h2 class="display-5 mb-4">
                     Conference Organizing Committee
@@ -559,7 +637,7 @@
             </div>
         </section>
     </main>
-    <footer>
+    <footer id="contacts">
         <div class="px-3 py-3 pt-md-3 pb-md-2 mx-auto text-center col-8 d-flex flex-row align-items-start">
             <div class="contacts d-flex flex-column">
                 <h2 class="display-5 mb-4 d-flex">
@@ -573,7 +651,7 @@
                         </h5>
                         <div class="person mb-5">
                             <p>
-                                Alim Pulatov - Professor, Executive Secretary of CASCADE consortium
+                                <b>Alim Pulatov</b> - Professor, Executive Secretary of CASCADE consortium
                             </p>
                             <h6>
                                 Contacts:
@@ -592,7 +670,8 @@
                         </h5>
                         <div class="person mb-5">
                             <p>
-                                Khabibullo Pirmatov – coordinator of the CASCADE consortium from TIIAME, EcoGIS center,
+                                <b>Khabibullo Pirmatov</b> – coordinator of the CASCADE consortium from TIIAME, EcoGIS
+                                center,
                                 associate Professor, PhD Slovak University of Agriculture, Slovakia
                             </p>
                             <h6>
@@ -607,8 +686,7 @@
                         </div>
                         <div class="person mb-3">
                             <p>
-                                Khabibullo Pirmatov – coordinator of the CASCADE consortium from TIIAME, EcoGIS center,
-                                associate Professor, PhD Slovak University of Agriculture, Slovakia
+                                <b>Sardor Khamidov</b> - assistant of professor, MSc Northwest A&F University, China
                             </p>
                             <h6>
                                 Contacts:
@@ -617,7 +695,7 @@
                                 phone: <a href="tel:+998(71) 237-19-34">+998(71) 237-19-34</a>
                             </p>
                             <p>
-                                mail: <a href="mailto:hpirmatov@mail.ru">hpirmatov@mail.ru</a>
+                                mail: <a href="mailto:sardorkhamidov@mail.ru">sardorkhamidov@mail.ru</a>
                             </p>
                         </div>
                     </li>
@@ -627,13 +705,13 @@
                 <h2 class="display-5 mb-4 d-flex ">
                     TASHKENT INSTITUTE OF IRRIGATION AND AGRICULTURAL MECHANIZATION ENGINEERS
                 </h2>
-                <div class="google-map mb-3">
+                <div class="google-map mb-3" id="venue">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d315.06679872708355!2d69.23977863431953!3d41.299346666319984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b5b3e953c75%3A0xe8e8f91da680c6ed!2sEcoGIS!5e0!3m2!1sru!2s!4v1640686393172!5m2!1sru!2s"
                         width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
                 <div class="counter d-flex justify-content-between">
-                    <a  href="https://info.flagcounter.com/Khzx"><img
+                    <a href="https://info.flagcounter.com/Khzx"><img
                             src="https://s01.flagcounter.com/mini/Khzx/bg_F0F0F0/txt_000000/border_F0F0F0/flags_0/"
                             alt="Flag Counter" border="0"></a>
                     <a href="https://info.flagcounter.com/SSNo"><img
