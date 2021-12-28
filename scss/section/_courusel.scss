@@ -10,8 +10,9 @@
 
 .card-container{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    gap: 30px;
+    justify-content: space-between;
+    
     a{
         color: black;
         text-decoration: none;
@@ -36,7 +37,6 @@
         display: block;
         height: 400px;
         width: 300px;
-        margin: 30px;
         text-align: left;
         hr{
             display: inline-flex;

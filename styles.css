@@ -2,6 +2,10 @@ body {
   background-color: #f0f0f0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .m-bottom-0 {
   margin-bottom: 0 !important;
 }
@@ -15,6 +19,19 @@ header.nav-fixed {
 
 .nav-active {
   background-color: rgba(175, 179, 175, 0.7) !important;
+}
+
+.person {
+  width: 40%;
+}
+
+.person a {
+  color: black;
+  font-weight: 600;
+}
+
+.add-info {
+  background-color: #afb3af;
 }
 
 .place-holder {
@@ -32,10 +49,10 @@ header.nav-fixed {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  gap: 30px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .card-container a {
@@ -59,7 +76,6 @@ header.nav-fixed {
   display: block;
   height: 400px;
   width: 300px;
-  margin: 30px;
   text-align: left;
 }
 
